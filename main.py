@@ -1,4 +1,4 @@
-from src.casey.cli.menu import run
+from casey.menu import run
 
 if __name__ == "__main__":
     run()

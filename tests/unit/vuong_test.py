@@ -1,4 +1,4 @@
-from casey.cli.menu import sum, subtract
+from casey.menu import sum, subtract
 
 # from casey.cli.menu import *'
 
