@@ -3,10 +3,16 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "casey"
+name = "Warehouse-management-and-storage-optimization"
 version = "0.1.0"
-description = "Case-y CLI project"
+description = ""
 authors = [
+    { name = "Trương Đỗ Vương", email = "zombietdv2701@gmail.com" },
+    { name = "Nguyễn Trần Việt Nhật", email = "nhatok198@gmail.com" },
+    { name = "Võ Quỳnh Nhi", email = "Voquynhnhi2006@gmail.com" },
+    { name = "Nguyễn Trí Nguyên", email = "nguyentringuyen2406@gmail.com" },
+    { name = "Lê Bá Nguyên", email = "nguyenlb5985@gmail.com" },
+    { name = "Nguyễn Minh Hiếu", email = "nguyenminhhieu170406@gmail.com" }
 ]
 readme = "README.md"
 requires-python = ">=3.9"
