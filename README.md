@@ -14,7 +14,7 @@ git clone [https://github.com/zombieTDV/Case-unknown.git](https://github.com/zom
 ```
 ```bash
 cd Warehouse-management-and-storage-optimization
----
+```
 
 ### Step 2: Create Virtual Environment
 ```bash
