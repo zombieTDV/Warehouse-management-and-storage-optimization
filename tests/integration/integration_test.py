@@ -1,2 +1,5 @@
+from Warehouse.menu import run
+
+
 def test_sample():
-    assert True
+    run()
