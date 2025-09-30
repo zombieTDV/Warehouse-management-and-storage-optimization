@@ -98,14 +98,14 @@ jobs:
 
       - name: Build .exe with PyInstaller
         run: |
-          pyinstaller --onefile --name "Case Y" main.py
+          pyinstaller --onefile --name "Warehouse-management-and-storage-optimization" main.py
 
       - name: Prepare artifact (zip exe)
         run: |
-          if (Test-Path "./dist/Case Y.exe") {
-            Compress-Archive -Path "./dist/Case Y.exe" -DestinationPath "./dist/Case-Y-v${{ github.run_number }}.zip"
+          if (Test-Path "./dist/Warehouse-management-and-storage-optimization.exe") {
+            Compress-Archive -Path "./dist/Warehouse-management-and-storage-optimization.exe" -DestinationPath "./dist/Warehouse-management-and-storage-optimization-v${{ github.run_number }}.zip"
           } else {
-            Write-Error "Expected dist/Case Y.exe not found"
+            Write-Error "Expected dist/Warehouse-management-and-storage-optimization.exe not found"
           }
 
       - name: Create GitHub Release and Upload Asset
@@ -114,6 +114,6 @@ jobs:
           tag_name: v${{ github.run_number }}b
           name: Release v${{ github.run_number }}
           body: Automated build from ${{ github.sha }}
-          files: ./dist/Case-Y-v${{ github.run_number }}.zip
+          files: ./dist/Warehouse-management-and-storage-optimization-v${{ github.run_number }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
