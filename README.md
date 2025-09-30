@@ -76,4 +76,4 @@ Our configuration lints all .py files in src/, tests/, and the project root (e.g
 ## Development Notes
 - Project follows the src/ layout (src/casey/ contains all source code).
 - Root-level main.py is a thin shim for quick running in VS Code.
-- For production/packaging, use `python -m casey.cli.menu` or the `casey` CLI entry point.
+<!-- - For production/packaging, use `python -m casey.cli.menu` or the `casey` CLI entry point. -->
