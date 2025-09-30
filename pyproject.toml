@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "casey"
+version = "0.1.0"
+description = "Case-y CLI project"
+authors = [
+    { name = "Trương Đỗ Vương", email = "zombietdv2701@gmail.com" },
+    { name = "Nguyễn Trí Nguyên", email = "nguyentringuyen2406@gmail.com" },
+    { name = "Lê Bá Nguyên, email = "nguyenlb5985@gmail.com" },
+    { name = "Nguyễn Trần Việt Nhật", email = "nhatok198@gmail.com" },
+    { name = "Colab Teammate", email = "blank" },
+    { name = "Colab Teammate", email = "Blank" }
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    
+]  # runtime deps go here
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+    "black",
+    "isort",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[tool.black]
+line-length = 88
+target-version = ["py39"]
+
+
+[tool.isort]
+profile = "black"
+line_length = 88
