@@ -9,8 +9,8 @@
 ---
 
 ### Step 1: Clone the Repository
-git clone
-cd
+git clone https://github.com/zombieTDV/Case-unknown.git
+cd Case-unknown
 ---
 
 ### Step 2: Create Virtual Environment
