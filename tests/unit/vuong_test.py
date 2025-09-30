@@ -1,6 +1,4 @@
-from casey.menu import sum, subtract
-
-# from casey.cli.menu import *'
+from Warehouse.menu import sum, subtract
 
 
 def test_sample():
