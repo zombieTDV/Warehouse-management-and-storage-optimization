@@ -9,8 +9,8 @@
 ---
 
 ### Step 1: Clone the Repository
-git clone https://github.com/zombieTDV/Case-unknown.git
-cd Case-unknown
+git clone [https://github.com/zombieTDV/Case-unknown.git](https://github.com/zombieTDV/Warehouse-management-and-storage-optimization.git)
+cd Warehouse-management-and-storage-optimization
 ---
 
 ### Step 2: Create Virtual Environment
