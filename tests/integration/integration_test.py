@@ -1,4 +1,4 @@
-from Warehouse.menu import run
+from src.menu import run
 
 
 def test_sample():
