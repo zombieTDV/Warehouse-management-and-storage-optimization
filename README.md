@@ -149,9 +149,15 @@ Prerequisites:
 - Docker Desktop
 - VS Code + *Remote - Containers* (or *Dev Containers*) extension
 
-1. Ensure the repo contains `.devcontainer/Dockerfile` and `.devcontainer/devcontainer.json`.
-2. In VS Code: **Command Palette → Dev Containers: Reopen in Container**.
-3. The devcontainer will build the image and run the `postCreateCommand`:
+#### Step 1. Clone the Repository:
+
+- `git clone https://github.com/zombieTDV/Warehouse-management-and-storage-optimization.git`
+- `cd Warehouse-management-and-storage-optimization`
+
+#### Step 2. In VS Code: **Command Palette → Dev Containers: Reopen in Container**.
+#### Step 3. The devcontainer *will build* the image and run the `postCreateCommand`:
+  > (You don't need to do anything, it's an automatic process)
+
    - creates a venv at `/app/.venv`
    - upgrades pip **inside** the venv
    - installs your package in editable mode: `pip install -e .[dev]` (falls back to `pip install -e .`)
@@ -163,6 +169,10 @@ When the container is ready, open a terminal inside VS Code (it will be in the c
 ```bash
 /app/.venv/bin/python
 ```
+
+**YOU DONE! Have a nice Day!**
+
+### Additional Notes
 
 Run common commands from the in-container terminal:
 
