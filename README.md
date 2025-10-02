@@ -1,7 +1,6 @@
 # Warehouse-management-and-storage-optimization
 
 ![Python](https://img.shields.io/badge/python-3.12-blue)
-![Node.js](https://img.shields.io/badge/node-22-alpine-green)
 ![Build](https://img.shields.io/github/actions/workflow/status/zombieTDV/Warehouse-management-and-storage-optimization/ci.yml?branch=main)
 ![License](https://img.shields.io/github/license/zombieTDV/Warehouse-management-and-storage-optimization)
 
