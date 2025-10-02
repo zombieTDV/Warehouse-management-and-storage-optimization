@@ -1,0 +1,17 @@
+# Minimal .devcontainer/Dockerfile
+FROM node:22-alpine
+
+# Install essentials (no global pip upgrade)
+RUN apk add --no-cache \
+      git \
+      python3 \
+      py3-virtualenv \
+      bash \
+      curl
+
+WORKDIR /app
+
+# keep conventional-changelog-cli available (optional)
+RUN npm install -g conventional-changelog-cli || true
+
+CMD ["bash"]

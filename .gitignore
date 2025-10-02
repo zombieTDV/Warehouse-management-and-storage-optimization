@@ -5,6 +5,14 @@ __pycache__/
 *.so
 private
 
+
+# Node
+node_modules/
+dist/
+
+# Devcontainer local overrides
+.devcontainer/devcontainer.local.json
+
 # Distribution / packaging
 .Python
 build/

@@ -1,0 +1,39 @@
+{
+  "name": "Node.js + Git Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "remoteUser": "root",
+  "workspaceFolder": "/app",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/app,type=bind"
+  ],
+  "forwardPorts": [8000],
+  "containerEnv": {
+    "PYTHONUNBUFFERED": "1"
+  },
+  "postCreateCommand": "bash -lc 'python3 -m venv .venv && . .venv/bin/activate && pip install --upgrade pip && (pip install -e .[dev] || pip install -e .) && pip install pre-commit || true && pre-commit install || true && npm install -g conventional-changelog-cli || true'",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "github.vscode-pull-request-github",
+        "donjayamanne.git-extension-pack",
+        "mhutchie.git-graph",
+        "donjayamanne.githistory",
+        "github.vscode-github-actions",
+        "eamodio.gitlens",
+        "ms-python.isort",
+        "DavidAnson.vscode-markdownlint",
+        "ms-python.debugpy",
+        "ms-python.pylint",
+        "ms-python.python"
+      ],
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "python.pythonPath": "/app/.venv/bin/python"
+      }
+    }
+  }
+}
