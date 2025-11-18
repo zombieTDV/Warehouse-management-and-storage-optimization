@@ -66,7 +66,14 @@ class BinPackingAlgorithms:
     def first_fit_decreasing(env) -> Tuple[List, int]:
         """"Thuật toán First Fit Decreasing:
         Sắp xếp items theo thứ tự giảm dần rồi áp dụng First Fit"""
-        pass
+        def bubble_sort(items: List):
+            for i in range(len(items)):
+                for j in range(0, len(items)-i-1):
+                    if items[j].size < items[j+1].size:
+                        items[j], items[j+1] = items[j+1], items[j]
+        env.reset()
+        bubble_sort(env.items)
+        return BinPackingAlgorithms.first_fit(env)
     
     @staticmethod
     def knapsack_based(env) -> Tuple[List, int]:
