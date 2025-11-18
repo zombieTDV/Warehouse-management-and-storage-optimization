@@ -65,10 +65,14 @@ class BinPackingAlgorithms:
         Sắp xếp items theo thứ tự giảm dần rồi áp dụng First Fit.
         FFD thường cho kết quả tốt hơn First Fit thông thường.
         """
-        original_items = env.items[:] 
-        env.items.sort(key=lambda x: x.size, reverse=True)
-        result = BinPackingAlgorithms.first_fit(env)
-        return result
+        def bubble_sort(items: List):
+            for i in range(len(items)):
+                for j in range(0, len(items)-i-1):
+                    if items[j].size < items[j+1].size:
+                        items[j], items[j+1] = items[j+1], items[j]
+        env.reset()
+        bubble_sort(env.items)
+        return BinPackingAlgorithms.first_fit(env)
     
     @staticmethod
     def knapsack_based(env) -> Tuple[List, int]:
