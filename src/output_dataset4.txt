@@ -1,0 +1,445 @@
+BIN PACKING - KẾT QUẢ CHẠY TỪ FILE
+Input file: ./input_dataset4.txt
+Sức chứa mỗi thùng: 100
+Số lượng món hàng: 44
+Kích thước món hàng: [50, 50, 45, 55, 50, 50, 45, 55, 50, 50, 55, 45, 50, 50, 55, 45, 50, 50, 55, 45, 50, 45, 55, 50, 45, 55, 50, 50, 50, 50, 55, 45, 50, 50, 55, 45, 50, 50, 55, 45, 50, 45, 55, 50]
+
+
+====================================================================================================
+SO SÁNH CÁC THUẬT TOÁN
+====================================================================================================
+Thuật toán                           Số bins    Tỷ lệ sử dụng    Thời gian (s)
+----------------------------------------------------------------------------------------------------
+First Fit (Tham lam)                 23          95.65%          0.000
+Best Fit (Tham lam)                  23          95.65%          0.000
+First Fit Decreasing                 22         100.00%          0.000
+Knapsack-based (Quy hoạch động)      22         100.00%          0.009
+Branch and Bound (Nhánh cận)         22         100.00%          0.001
+====================================================================================================
+
+
+####################################################################################################
+KẾT QUẢ THUẬT TOÁN: First Fit (Tham lam)
+Thời gian chạy: 0.000221 s
+####################################################################################################
+
+============================================================
+Kết quả First Fit (Tham lam)
+============================================================
+
+Bin0(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item0(50), Item1(50)
+
+Bin1(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item2(45), Item3(55)
+
+Bin2(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item4(50), Item5(50)
+
+Bin3(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item6(45), Item7(55)
+
+Bin4(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item8(50), Item9(50)
+
+Bin5(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item10(55), Item11(45)
+
+Bin6(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item12(50), Item13(50)
+
+Bin7(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item14(55), Item15(45)
+
+Bin8(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item16(50), Item17(50)
+
+Bin9(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item18(55), Item19(45)
+
+Bin10(used=95/100, items=2) - Sử dụng: 95.0%
+  Items: Item20(50), Item21(45)
+
+Bin11(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item22(55), Item24(45)
+
+Bin12(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item23(50), Item26(50)
+
+Bin13(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item25(55), Item31(45)
+
+Bin14(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item27(50), Item28(50)
+
+Bin15(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item29(50), Item32(50)
+
+Bin16(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item30(55), Item35(45)
+
+Bin17(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item33(50), Item36(50)
+
+Bin18(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item34(55), Item39(45)
+
+Bin19(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item37(50), Item40(50)
+
+Bin20(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item38(55), Item41(45)
+
+Bin21(used=55/100, items=1) - Sử dụng: 55.0%
+  Items: Item42(55)
+
+Bin22(used=50/100, items=1) - Sử dụng: 50.0%
+  Items: Item43(50)
+
+============================================================
+Tổng số bins: 23
+Tổng số items: 44
+Tỷ lệ sử dụng trung bình: 95.65%
+Tổng không gian lãng phí: 100
+============================================================
+
+
+
+####################################################################################################
+KẾT QUẢ THUẬT TOÁN: Best Fit (Tham lam)
+Thời gian chạy: 0.000165 s
+####################################################################################################
+
+============================================================
+Kết quả Best Fit (Tham lam)
+============================================================
+
+Bin0(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item0(50), Item1(50)
+
+Bin1(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item2(45), Item3(55)
+
+Bin2(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item4(50), Item5(50)
+
+Bin3(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item6(45), Item7(55)
+
+Bin4(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item8(50), Item9(50)
+
+Bin5(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item10(55), Item11(45)
+
+Bin6(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item12(50), Item13(50)
+
+Bin7(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item14(55), Item15(45)
+
+Bin8(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item16(50), Item17(50)
+
+Bin9(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item18(55), Item19(45)
+
+Bin10(used=95/100, items=2) - Sử dụng: 95.0%
+  Items: Item20(50), Item21(45)
+
+Bin11(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item22(55), Item24(45)
+
+Bin12(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item23(50), Item26(50)
+
+Bin13(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item25(55), Item31(45)
+
+Bin14(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item27(50), Item28(50)
+
+Bin15(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item29(50), Item32(50)
+
+Bin16(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item30(55), Item35(45)
+
+Bin17(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item33(50), Item36(50)
+
+Bin18(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item34(55), Item39(45)
+
+Bin19(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item37(50), Item40(50)
+
+Bin20(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item38(55), Item41(45)
+
+Bin21(used=55/100, items=1) - Sử dụng: 55.0%
+  Items: Item42(55)
+
+Bin22(used=50/100, items=1) - Sử dụng: 50.0%
+  Items: Item43(50)
+
+============================================================
+Tổng số bins: 23
+Tổng số items: 44
+Tỷ lệ sử dụng trung bình: 95.65%
+Tổng không gian lãng phí: 100
+============================================================
+
+
+
+####################################################################################################
+KẾT QUẢ THUẬT TOÁN: First Fit Decreasing
+Thời gian chạy: 0.000230 s
+####################################################################################################
+
+============================================================
+Kết quả First Fit Decreasing
+============================================================
+
+Bin0(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item3(55), Item2(45)
+
+Bin1(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item7(55), Item6(45)
+
+Bin2(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item10(55), Item11(45)
+
+Bin3(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item14(55), Item15(45)
+
+Bin4(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item18(55), Item19(45)
+
+Bin5(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item22(55), Item21(45)
+
+Bin6(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item25(55), Item24(45)
+
+Bin7(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item30(55), Item31(45)
+
+Bin8(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item34(55), Item35(45)
+
+Bin9(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item38(55), Item39(45)
+
+Bin10(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item42(55), Item41(45)
+
+Bin11(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item0(50), Item1(50)
+
+Bin12(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item4(50), Item5(50)
+
+Bin13(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item8(50), Item9(50)
+
+Bin14(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item12(50), Item13(50)
+
+Bin15(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item16(50), Item17(50)
+
+Bin16(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item20(50), Item23(50)
+
+Bin17(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item26(50), Item27(50)
+
+Bin18(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item28(50), Item29(50)
+
+Bin19(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item32(50), Item33(50)
+
+Bin20(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item36(50), Item37(50)
+
+Bin21(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item40(50), Item43(50)
+
+============================================================
+Tổng số bins: 22
+Tổng số items: 44
+Tỷ lệ sử dụng trung bình: 100.00%
+Tổng không gian lãng phí: 0
+============================================================
+
+
+
+####################################################################################################
+KẾT QUẢ THUẬT TOÁN: Knapsack-based (Quy hoạch động)
+Thời gian chạy: 0.009342 s
+####################################################################################################
+
+============================================================
+Kết quả Knapsack-based (Quy hoạch động)
+============================================================
+
+Bin0(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item1(50), Item0(50)
+
+Bin1(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item3(55), Item2(45)
+
+Bin2(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item5(50), Item4(50)
+
+Bin3(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item7(55), Item6(45)
+
+Bin4(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item9(50), Item8(50)
+
+Bin5(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item11(45), Item10(55)
+
+Bin6(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item13(50), Item12(50)
+
+Bin7(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item15(45), Item14(55)
+
+Bin8(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item17(50), Item16(50)
+
+Bin9(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item19(45), Item18(55)
+
+Bin10(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item22(55), Item21(45)
+
+Bin11(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item23(50), Item20(50)
+
+Bin12(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item25(55), Item24(45)
+
+Bin13(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item27(50), Item26(50)
+
+Bin14(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item29(50), Item28(50)
+
+Bin15(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item31(45), Item30(55)
+
+Bin16(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item33(50), Item32(50)
+
+Bin17(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item35(45), Item34(55)
+
+Bin18(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item37(50), Item36(50)
+
+Bin19(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item39(45), Item38(55)
+
+Bin20(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item42(55), Item41(45)
+
+Bin21(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item43(50), Item40(50)
+
+============================================================
+Tổng số bins: 22
+Tổng số items: 44
+Tỷ lệ sử dụng trung bình: 100.00%
+Tổng không gian lãng phí: 0
+============================================================
+
+
+
+####################################################################################################
+KẾT QUẢ THUẬT TOÁN: Branch and Bound (Nhánh cận)
+Thời gian chạy: 0.000580 s
+####################################################################################################
+
+============================================================
+Kết quả Branch and Bound (Nhánh cận)
+============================================================
+
+Bin0(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item3(55), Item2(45)
+
+Bin1(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item7(55), Item6(45)
+
+Bin2(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item10(55), Item11(45)
+
+Bin3(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item14(55), Item15(45)
+
+Bin4(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item18(55), Item19(45)
+
+Bin5(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item22(55), Item21(45)
+
+Bin6(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item25(55), Item24(45)
+
+Bin7(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item30(55), Item31(45)
+
+Bin8(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item34(55), Item35(45)
+
+Bin9(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item38(55), Item39(45)
+
+Bin10(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item42(55), Item41(45)
+
+Bin11(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item0(50), Item1(50)
+
+Bin12(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item4(50), Item5(50)
+
+Bin13(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item8(50), Item9(50)
+
+Bin14(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item12(50), Item13(50)
+
+Bin15(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item16(50), Item17(50)
+
+Bin16(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item20(50), Item23(50)
+
+Bin17(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item26(50), Item27(50)
+
+Bin18(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item28(50), Item29(50)
+
+Bin19(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item32(50), Item33(50)
+
+Bin20(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item36(50), Item37(50)
+
+Bin21(used=100/100, items=2) - Sử dụng: 100.0%
+  Items: Item40(50), Item43(50)
+
+============================================================
+Tổng số bins: 22
+Tổng số items: 44
+Tỷ lệ sử dụng trung bình: 100.00%
+Tổng không gian lãng phí: 0
+============================================================
+
+
