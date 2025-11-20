@@ -1,0 +1,5 @@
+# Bin capacity
+100
+
+# Small items first
+5 5 5 10 10 10 15 15 20 25 30 30 35 40 45 50 55 60

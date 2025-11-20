@@ -1,0 +1,74 @@
+Runtime benchmark summary
+
+BENCHMARK run with TRIALS=3, SCALES=[1, 2, 5, 10]
+
+CSV output: C:\document\Study documents\PTTK_GT\BTL\Warehouse-management-and-storage-optimization\run_time.csv
+
+
+Aggregated (mean, median) per scenario/scale/algorithm:
+
+       original | scale=1  | n=18  | FirstFit   | mean=0.000016s median=0.000015s
+       original | scale=1  | n=18  | BestFit    | mean=0.000019s median=0.000017s
+       original | scale=1  | n=18  | FFD        | mean=0.000028s median=0.000027s
+       original | scale=1  | n=18  | Knapsack   | mean=0.001655s median=0.001494s
+       original | scale=1  | n=18  | BnB        | mean=0.000145s median=0.000140s
+       original | scale=2  | n=36  | FirstFit   | mean=0.000023s median=0.000023s
+       original | scale=2  | n=36  | BestFit    | mean=0.000026s median=0.000025s
+       original | scale=2  | n=36  | FFD        | mean=0.000063s median=0.000062s
+       original | scale=2  | n=36  | Knapsack   | mean=0.004994s median=0.004917s
+       original | scale=2  | n=36  | BnB        | mean=0.001246s median=0.001120s
+       original | scale=5  | n=90  | FirstFit   | mean=0.000097s median=0.000096s
+       original | scale=5  | n=90  | BestFit    | mean=0.000093s median=0.000090s
+       original | scale=5  | n=90  | FFD        | mean=0.000355s median=0.000354s
+       original | scale=5  | n=90  | Knapsack   | mean=0.025195s median=0.025440s
+       original | scale=5  | n=90  | BnB        | mean=0.001353s median=0.001065s
+       original | scale=10 | n=180 | FirstFit   | mean=0.000356s median=0.000360s
+       original | scale=10 | n=180 | BestFit    | mean=0.000331s median=0.000332s
+       original | scale=10 | n=180 | FFD        | mean=0.001386s median=0.001381s
+       original | scale=10 | n=180 | Knapsack   | mean=0.094822s median=0.094822s
+       original | scale=10 | n=180 | BnB        | mean=0.004838s median=0.005214s
+Plot saved: C:\document\Study documents\PTTK_GT\BTL\Warehouse-management-and-storage-optimization\run_time_original.png
+
+    small_first | scale=1  | n=18  | FirstFit   | mean=0.000013s median=0.000013s
+    small_first | scale=1  | n=18  | BestFit    | mean=0.000017s median=0.000016s
+    small_first | scale=1  | n=18  | FFD        | mean=0.000037s median=0.000037s
+    small_first | scale=1  | n=18  | Knapsack   | mean=0.001083s median=0.001080s
+    small_first | scale=1  | n=18  | BnB        | mean=0.000164s median=0.000161s
+    small_first | scale=2  | n=36  | FirstFit   | mean=0.000023s median=0.000022s
+    small_first | scale=2  | n=36  | BestFit    | mean=0.000028s median=0.000027s
+    small_first | scale=2  | n=36  | FFD        | mean=0.000087s median=0.000086s
+    small_first | scale=2  | n=36  | Knapsack   | mean=0.004060s median=0.004079s
+    small_first | scale=2  | n=36  | BnB        | mean=0.001479s median=0.001418s
+    small_first | scale=5  | n=90  | FirstFit   | mean=0.000091s median=0.000090s
+    small_first | scale=5  | n=90  | BestFit    | mean=0.000114s median=0.000104s
+    small_first | scale=5  | n=90  | FFD        | mean=0.000400s median=0.000394s
+    small_first | scale=5  | n=90  | Knapsack   | mean=0.021013s median=0.021081s
+    small_first | scale=5  | n=90  | BnB        | mean=0.001119s median=0.001099s
+    small_first | scale=10 | n=180 | FirstFit   | mean=0.000298s median=0.000291s
+    small_first | scale=10 | n=180 | BestFit    | mean=0.000281s median=0.000284s
+    small_first | scale=10 | n=180 | FFD        | mean=0.001460s median=0.001461s
+    small_first | scale=10 | n=180 | Knapsack   | mean=0.083336s median=0.083485s
+    small_first | scale=10 | n=180 | BnB        | mean=0.003741s median=0.003903s
+Plot saved: C:\document\Study documents\PTTK_GT\BTL\Warehouse-management-and-storage-optimization\run_time_small_first.png
+
+mixed_adversarial | scale=1  | n=18  | FirstFit   | mean=0.000009s median=0.000009s
+mixed_adversarial | scale=1  | n=18  | BestFit    | mean=0.000012s median=0.000011s
+mixed_adversarial | scale=1  | n=18  | FFD        | mean=0.000021s median=0.000020s
+mixed_adversarial | scale=1  | n=18  | Knapsack   | mean=0.001260s median=0.001255s
+mixed_adversarial | scale=1  | n=18  | BnB        | mean=0.000140s median=0.000129s
+mixed_adversarial | scale=2  | n=36  | FirstFit   | mean=0.000022s median=0.000021s
+mixed_adversarial | scale=2  | n=36  | BestFit    | mean=0.000025s median=0.000025s
+mixed_adversarial | scale=2  | n=36  | FFD        | mean=0.000069s median=0.000069s
+mixed_adversarial | scale=2  | n=36  | Knapsack   | mean=0.004341s median=0.004340s
+mixed_adversarial | scale=2  | n=36  | BnB        | mean=0.001176s median=0.001148s
+mixed_adversarial | scale=5  | n=90  | FirstFit   | mean=0.000096s median=0.000096s
+mixed_adversarial | scale=5  | n=90  | BestFit    | mean=0.000097s median=0.000099s
+mixed_adversarial | scale=5  | n=90  | FFD        | mean=0.000395s median=0.000378s
+mixed_adversarial | scale=5  | n=90  | Knapsack   | mean=0.023749s median=0.023806s
+mixed_adversarial | scale=5  | n=90  | BnB        | mean=0.001076s median=0.001059s
+mixed_adversarial | scale=10 | n=180 | FirstFit   | mean=0.000338s median=0.000326s
+mixed_adversarial | scale=10 | n=180 | BestFit    | mean=0.000263s median=0.000261s
+mixed_adversarial | scale=10 | n=180 | FFD        | mean=0.001431s median=0.001425s
+mixed_adversarial | scale=10 | n=180 | Knapsack   | mean=0.091705s median=0.090112s
+mixed_adversarial | scale=10 | n=180 | BnB        | mean=0.003853s median=0.003519s
+Plot saved: C:\document\Study documents\PTTK_GT\BTL\Warehouse-management-and-storage-optimization\run_time_mixed_adversarial.png

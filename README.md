@@ -51,3 +51,9 @@ pip install -e .
   python main.py
 ```
 ---
+
+### Step 5: Run the test-cases
+
+```bash
+pytest -q
+```

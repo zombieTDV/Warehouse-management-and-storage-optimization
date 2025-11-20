@@ -21,7 +21,7 @@ dependencies = [
 ]  # runtime deps go here
 
 [project.optional-dependencies]
-dev = [
+dev = [ "pytest", "matplotlib"
 
 ]
 
