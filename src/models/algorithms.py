@@ -135,66 +135,68 @@ class BinPackingAlgorithms:
         Tìm kiếm giải pháp tối ưu bằng cách duyệt cây quyết định
         và cắt tỉa các nhánh không khả thi.
         """
+@staticmethod
+    def branch_and_bound(env, max_bins: int = None) -> Tuple[List, int]:
+        """
+        Thuật toán Nhánh và Cận (Branch and Bound)
+        Được cài đặt bám sát các bước phân tích trong báo cáo.
+        """
         env.reset()
         items = env.items
-        # Sắp xếp giảm dần để tối ưu quá trình duyệt
+        bin_capacity = env.bin_capacity
+
         sorted_items = sorted(items, key=lambda x: x.size, reverse=True)
         
-        best_min_bins = len(items) + 1
-        best_allocation = []
+        n = len(items)
+        upper_bound = n + 1
         
-        current_bins_remaining = []
-        current_allocation = []
+        best_solution = []
         
+        current_bins_remaining = [] 
+        current_allocation = []  
+
         def backtrack(index):
-            nonlocal best_min_bins, best_allocation
+            nonlocal upper_bound, best_solution
             
-            # Điều kiện dừng
             if index == len(sorted_items):
                 num_bins = len(current_bins_remaining)
-                if num_bins < best_min_bins:
-                    best_min_bins = num_bins
-                    best_allocation = copy.deepcopy(current_allocation)
+                
+                if num_bins < upper_bound:
+                    upper_bound = num_bins
+                    best_solution = copy.deepcopy(current_allocation)
                 return
-
             item = sorted_items[index]
-            
-            # Cắt tỉa (Pruning)
-            if len(current_bins_remaining) >= best_min_bins:
-                return
-            
-            # Cắt tỉa bổ sung: Lower Bound
-            remaining_size = sum(i.size for i in sorted_items[index:])
-            min_additional_bins = (remaining_size + env.bin_capacity - 1) // env.bin_capacity
-            if len(current_bins_remaining) + min_additional_bins >= best_min_bins:
-                return
 
-            # Thử đặt vào các thùng hiện có
+            if len(current_bins_remaining) >= upper_bound:
+                return
+            
+            remaining_size = sum(i.size for i in sorted_items[index:])
+            bins_needed = math.ceil(remaining_size / bin_capacity)
+            lower_bound = len(current_bins_remaining) + bins_needed
+            
+            if lower_bound >= upper_bound:
+                return
+                
             for i in range(len(current_bins_remaining)):
                 if current_bins_remaining[i] >= item.size:
                     current_bins_remaining[i] -= item.size
                     current_allocation[i].append(item)
-                    
                     backtrack(index + 1)
                     
                     current_allocation[i].pop()
                     current_bins_remaining[i] += item.size
             
-            # Thử đặt vào thùng mới
-            if len(current_bins_remaining) + 1 < best_min_bins:
-                current_bins_remaining.append(env.bin_capacity - item.size)
-                current_allocation.append([item])
-                
+            if len(current_bins_remaining) + 1 < upper_bound:
+                current_bins_remaining.append(bin_capacity - item.size)
+                current_allocation.append([item]) 
                 backtrack(index + 1)
                 
                 current_allocation.pop()
                 current_bins_remaining.pop()
-
         backtrack(0)
-        
         env.reset()
-        if best_allocation:
-            for bin_items in best_allocation:
+        if best_solution:
+            for bin_items in best_solution:
                 new_bin = env.create_bin()
                 for item in bin_items:
                     new_bin.add_item(item)
