@@ -4,6 +4,7 @@ Các thuật toán giải bài toán Bin Packing
 
 from typing import List, Tuple
 import copy
+import math
 from .warehouse_environment import Bin, Item
 
 
