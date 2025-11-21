@@ -131,13 +131,6 @@ class BinPackingAlgorithms:
     @staticmethod
     def branch_and_bound(env, max_bins: int = None) -> Tuple[List, int]:
         """
-        Thuật toán Nhánh và Cận (Branch and Bound):
-        Tìm kiếm giải pháp tối ưu bằng cách duyệt cây quyết định
-        và cắt tỉa các nhánh không khả thi.
-        """
-@staticmethod
-    def branch_and_bound(env, max_bins: int = None) -> Tuple[List, int]:
-        """
         Thuật toán Nhánh và Cận (Branch and Bound)
         Được cài đặt bám sát các bước phân tích trong báo cáo.
         """
