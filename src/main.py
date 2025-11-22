@@ -295,4 +295,4 @@ if __name__ == "__main__":
 
 
 #how to run:
-#python3 main.py --input ./input_1.txt --output ./output_1.txt
+# python3 main.py --input ./input_1.txt --output ./output_1.txt

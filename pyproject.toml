@@ -16,7 +16,7 @@ authors = [
 ]
 readme = "README.md"
 requires-python = ">=3.9"
-dependencies = [
+dependencies = [ "pytest", "matplotlib"
     
 ]  # runtime deps go here
 
