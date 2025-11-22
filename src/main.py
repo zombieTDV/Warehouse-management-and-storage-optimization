@@ -69,7 +69,7 @@ def write_output_file(output_path, header_text, summary_results, detail_texts):
         f.write("=" * 100 + "\n")
         f.write("SO SÁNH CÁC THUẬT TOÁN\n")
         f.write("=" * 100 + "\n")
-        f.write(f"{'Thuật toán':<36} {'Số bins':<10} {'Tỷ lệ sử dụng':<16} {'Thời gian (s)'}\n")
+        f.write(f"{'Thuật toán':<36} {'Số bins':<10} {'Tỷ lệ sử dụng':<16} {'Thời gian (ms)'}\n")
         f.write("-" * 100 + "\n")
         for name, num_bins, util, runtime in summary_results:
             runtime_str = f"{runtime:.3f}" if isinstance(runtime, (int, float)) else str(runtime)
@@ -80,7 +80,7 @@ def write_output_file(output_path, header_text, summary_results, detail_texts):
         for (name, _, _, runtime), detail in zip(summary_results, detail_texts):
             f.write("\n" + "#" * 100 + "\n")
             f.write(f"KẾT QUẢ THUẬT TOÁN: {name}\n")
-            f.write(f"Thời gian chạy: {runtime:.6f} s\n")
+            f.write(f"Thời gian chạy: {runtime:.6f} ms\n")
             f.write("#" * 100 + "\n")
             f.write(detail + "\n")
 
@@ -122,18 +122,18 @@ def run_algorithms_and_capture(bin_capacity, sizes, algorithms):
                     env.print_solution()
             detail_output = buf.getvalue()
 
-            end_time = time.perf_counter()
-            runtime = end_time - start_time
+            end_time = time.perf_counter() 
+            runtime = (end_time - start_time) * 1000
 
             summary_results.append((name, num_bins, avg_util, runtime))
             detail_texts.append(detail_output)
 
         except Exception as e:
-            end_time = time.perf_counter()
-            runtime = end_time - start_time
+            end_time = time.perf_counter() 
+            runtime = (end_time - start_time) * 1000
             # nếu lỗi, vẫn ghi lại thông tin lỗi trong detail (vẫn ghi runtime)
             summary_results.append((name, float('inf'), 0.0, runtime))
-            detail_texts.append(f"Lỗi khi chạy thuật toán {name}: {e}\nThời gian tính tới lỗi: {runtime:.6f} s")
+            detail_texts.append(f"Lỗi khi chạy thuật toán {name}: {e}\nThời gian tính tới lỗi: {runtime:.6f} ms")
 
     return summary_results, detail_texts
 
@@ -168,7 +168,7 @@ def run_demo():
     print("\n\n" + "=" * 70)
     print("SO SÁNH CÁC THUẬT TOÁN")
     print("=" * 70)
-    print(f"{'Thuật toán':<40} {'Số bins':<12} {'Tỷ lệ sử dụng':<16} {'Thời gian (s)'}")
+    print(f"{'Thuật toán':<40} {'Số bins':<12} {'Tỷ lệ sử dụng':<16} {'Thời gian (ms)'}")
     print("-" * 70)
     for name, num_bins, util, runtime in summary:
         if num_bins == float('inf'):
@@ -295,4 +295,4 @@ if __name__ == "__main__":
 
 
 #how to run:
-# python3 main.py --input ./input_1.txt --output ./output_1.txt
+# python3 main.py --input ./input_dataset1.txt --output ./output_dataset1.txt
