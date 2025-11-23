@@ -39,11 +39,6 @@ Development mode (recommended):
 ```bash
 pip install -e .[dev]
 ```
-Runtime only (minimal install):
-```bash
-pip install -e .
-```
----
 
 ### Step 4: Run the Application
 - Run the shim launcher at project root:
