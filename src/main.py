@@ -23,38 +23,75 @@ def build_env_from_sizes(bin_capacity, sizes):
 def read_input_file(path):
     """
     Đọc file input.
-    Định dạng hỗ trợ (linh hoạt):
-      - Dòng đầu: bin_capacity (int)
-      - Các dòng sau: kích thước items (mỗi dòng 1 số) hoặc 1 dòng nhiều số cách nhau khoảng trắng
-      - Dòng bắt đầu bằng '#' sẽ bị coi là comment và bỏ qua
-    Trả về: (bin_capacity: int, sizes: list[int])
+    Hỗ trợ:
+      - Dòng đầu: bin_capacity (int >= 0)
+      - Các dòng sau: kích thước items (int >= 0)
+      - Comment bắt đầu bằng '#'
     """
     sizes = []
     bin_capacity = None
     with open(path, 'r', encoding='utf-8') as f:
-        for line in f:
-            line = line.strip()
+        for lineno, raw_line in enumerate(f, start=1):
+            line = raw_line.strip()
             if not line or line.startswith('#'):
                 continue
+
+            parts = line.split()
+
+            # ---- Parse FIRST line (capacity) ----
             if bin_capacity is None:
-                # first non-empty, non-comment line => capacity
+                cap_token = parts[0]
                 try:
-                    bin_capacity = int(line.split()[0])
+                    bin_capacity = int(cap_token)
                 except ValueError:
-                    raise ValueError(f"Dòng đầu file input phải là số nguyên (sức chứa). Dòng: {line}")
-                # if there are more numbers on same line, treat them as sizes
-                parts = line.split()[1:]
-                for p in parts:
-                    if p:
-                        sizes.append(int(p))
+                    raise ValueError(
+                        f"Dòng {lineno}: sức chứa phải là số nguyên. Tìm thấy: '{cap_token}'.\n"
+                        f"Dòng: {raw_line.rstrip()}"
+                    )
+                if bin_capacity < 0:
+                    raise ValueError(
+                        f"Dòng {lineno}: sức chứa không được âm: {bin_capacity}.\n"
+                        f"Dòng: {raw_line.rstrip()}"
+                    )
+
+                # Parse additional items on same line
+                for p in parts[1:]:
+                    try:
+                        val = int(p)
+                    except ValueError:
+                        raise ValueError(
+                            f"Dòng {lineno}: item không phải integer: '{p}'.\n"
+                            f"Dòng: {raw_line.rstrip()}"
+                        )
+                    if val < 0:
+                        raise ValueError(
+                            f"Dòng {lineno}: item không được âm: {val}.\n"
+                            f"Dòng: {raw_line.rstrip()}"
+                        )
+                    sizes.append(val)
+
+            # ---- Parse FOLLOWING lines (items) ----
             else:
-                # parse sizes from following lines (space separated allowed)
-                parts = line.split()
                 for p in parts:
-                    sizes.append(int(p))
+                    try:
+                        val = int(p)
+                    except ValueError:
+                        raise ValueError(
+                            f"Dòng {lineno}: item không phải integer: '{p}'.\n"
+                            f"Dòng: {raw_line.rstrip()}"
+                        )
+                    if val < 0:
+                        raise ValueError(
+                            f"Dòng {lineno}: item không được âm: {val}.\n"
+                            f"Dòng: {raw_line.rstrip()}"
+                        )
+                    sizes.append(val)
+
     if bin_capacity is None:
-        raise ValueError("File input rỗng hoặc không có thông tin sức chứa.")
+        raise ValueError("File input rỗng hoặc không có dòng sức chứa.")
+
     return bin_capacity, sizes
+
 
 
 def write_output_file(output_path, header_text, summary_results, detail_texts):

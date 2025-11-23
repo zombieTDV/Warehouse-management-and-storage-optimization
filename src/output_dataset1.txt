@@ -2,7 +2,7 @@ BIN PACKING - KẾT QUẢ CHẠY TỪ FILE
 Input file: src/input_dataset1.txt
 Sức chứa mỗi thùng: 100
 Số lượng món hàng: 20
-Kích thước món hàng: [45, 30, 20, 10, 40, 25, 35, 15, 50, 30, 20, 30, 10, 45, 25, 15, 20, 30, 40, 10]
+Kích thước món hàng: [45, 30, 20, 10, -1, 25, 35, 15, 50, 30, 20, 30, 10, 45, 25, 15, 20, 30, 40, 10]
 
 
 ====================================================================================================
@@ -10,190 +10,45 @@ SO SÁNH CÁC THUẬT TOÁN
 ====================================================================================================
 Thuật toán                           Số bins    Tỷ lệ sử dụng    Thời gian (ms)
 ----------------------------------------------------------------------------------------------------
-First Fit (Tham lam)                 6           90.83%          0.440
-Best Fit (Tham lam)                  6           90.83%          0.084
-First Fit Decreasing                 6           90.83%          0.080
-Knapsack-based (Quy hoạch động)      6           90.83%          1.566
-Branch and Bound (Nhánh cận)         6           90.83%          0.264
+First Fit (Tham lam)                 inf          0.00%          0.031
+Best Fit (Tham lam)                  inf          0.00%          0.011
+First Fit Decreasing                 inf          0.00%          0.013
+Knapsack-based (Quy hoạch động)      inf          0.00%          0.006
+Branch and Bound (Nhánh cận)         inf          0.00%          0.006
 ====================================================================================================
 
 
 ####################################################################################################
 KẾT QUẢ THUẬT TOÁN: First Fit (Tham lam)
-Thời gian chạy: 0.440400 ms
+Thời gian chạy: 0.031200 ms
 ####################################################################################################
-
-============================================================
-Kết quả First Fit (Tham lam)
-============================================================
-
-Bin0(used=95/100, items=3) - Sử dụng: 95.0%
-  Items: Item0(45), Item1(30), Item2(20)
-
-Bin1(used=100/100, items=5) - Sử dụng: 100.0%
-  Items: Item3(10), Item4(40), Item5(25), Item7(15), Item12(10)
-
-Bin2(used=100/100, items=3) - Sử dụng: 100.0%
-  Items: Item6(35), Item8(50), Item15(15)
-
-Bin3(used=100/100, items=4) - Sử dụng: 100.0%
-  Items: Item9(30), Item10(20), Item11(30), Item16(20)
-
-Bin4(used=100/100, items=3) - Sử dụng: 100.0%
-  Items: Item13(45), Item14(25), Item17(30)
-
-Bin5(used=50/100, items=2) - Sử dụng: 50.0%
-  Items: Item18(40), Item19(10)
-
-============================================================
-Tổng số bins: 6
-Tổng số items: 20
-Tỷ lệ sử dụng trung bình: 90.83%
-Tổng không gian lãng phí: 55
-============================================================
-
-
+Lỗi khi chạy thuật toán First Fit (Tham lam): Kích thước phải > 0
+Thời gian tính tới lỗi: 0.031200 ms
 
 ####################################################################################################
 KẾT QUẢ THUẬT TOÁN: Best Fit (Tham lam)
-Thời gian chạy: 0.084300 ms
+Thời gian chạy: 0.011300 ms
 ####################################################################################################
-
-============================================================
-Kết quả Best Fit (Tham lam)
-============================================================
-
-Bin0(used=95/100, items=3) - Sử dụng: 95.0%
-  Items: Item0(45), Item1(30), Item2(20)
-
-Bin1(used=100/100, items=5) - Sử dụng: 100.0%
-  Items: Item3(10), Item4(40), Item5(25), Item7(15), Item12(10)
-
-Bin2(used=100/100, items=3) - Sử dụng: 100.0%
-  Items: Item6(35), Item8(50), Item15(15)
-
-Bin3(used=100/100, items=4) - Sử dụng: 100.0%
-  Items: Item9(30), Item10(20), Item11(30), Item16(20)
-
-Bin4(used=100/100, items=3) - Sử dụng: 100.0%
-  Items: Item13(45), Item14(25), Item17(30)
-
-Bin5(used=50/100, items=2) - Sử dụng: 50.0%
-  Items: Item18(40), Item19(10)
-
-============================================================
-Tổng số bins: 6
-Tổng số items: 20
-Tỷ lệ sử dụng trung bình: 90.83%
-Tổng không gian lãng phí: 55
-============================================================
-
-
+Lỗi khi chạy thuật toán Best Fit (Tham lam): Kích thước phải > 0
+Thời gian tính tới lỗi: 0.011300 ms
 
 ####################################################################################################
 KẾT QUẢ THUẬT TOÁN: First Fit Decreasing
-Thời gian chạy: 0.079800 ms
+Thời gian chạy: 0.013200 ms
 ####################################################################################################
-
-============================================================
-Kết quả First Fit Decreasing
-============================================================
-
-Bin0(used=95/100, items=2) - Sử dụng: 95.0%
-  Items: Item8(50), Item0(45)
-
-Bin1(used=100/100, items=3) - Sử dụng: 100.0%
-  Items: Item13(45), Item4(40), Item7(15)
-
-Bin2(used=100/100, items=3) - Sử dụng: 100.0%
-  Items: Item18(40), Item6(35), Item5(25)
-
-Bin3(used=100/100, items=4) - Sử dụng: 100.0%
-  Items: Item1(30), Item9(30), Item11(30), Item3(10)
-
-Bin4(used=95/100, items=4) - Sử dụng: 95.0%
-  Items: Item17(30), Item14(25), Item2(20), Item10(20)
-
-Bin5(used=55/100, items=4) - Sử dụng: 55.0%
-  Items: Item16(20), Item15(15), Item12(10), Item19(10)
-
-============================================================
-Tổng số bins: 6
-Tổng số items: 20
-Tỷ lệ sử dụng trung bình: 90.83%
-Tổng không gian lãng phí: 55
-============================================================
-
-
+Lỗi khi chạy thuật toán First Fit Decreasing: Kích thước phải > 0
+Thời gian tính tới lỗi: 0.013200 ms
 
 ####################################################################################################
 KẾT QUẢ THUẬT TOÁN: Knapsack-based (Quy hoạch động)
-Thời gian chạy: 1.565600 ms
+Thời gian chạy: 0.006200 ms
 ####################################################################################################
-
-============================================================
-Kết quả Knapsack-based (Quy hoạch động)
-============================================================
-
-Bin0(used=100/100, items=4) - Sử dụng: 100.0%
-  Items: Item4(40), Item3(10), Item2(20), Item1(30)
-
-Bin1(used=100/100, items=3) - Sử dụng: 100.0%
-  Items: Item8(50), Item7(15), Item6(35)
-
-Bin2(used=100/100, items=3) - Sử dụng: 100.0%
-  Items: Item9(30), Item5(25), Item0(45)
-
-Bin3(used=100/100, items=3) - Sử dụng: 100.0%
-  Items: Item14(25), Item13(45), Item11(30)
-
-Bin4(used=100/100, items=4) - Sử dụng: 100.0%
-  Items: Item18(40), Item17(30), Item12(10), Item10(20)
-
-Bin5(used=45/100, items=3) - Sử dụng: 45.0%
-  Items: Item19(10), Item16(20), Item15(15)
-
-============================================================
-Tổng số bins: 6
-Tổng số items: 20
-Tỷ lệ sử dụng trung bình: 90.83%
-Tổng không gian lãng phí: 55
-============================================================
-
-
+Lỗi khi chạy thuật toán Knapsack-based (Quy hoạch động): Kích thước phải > 0
+Thời gian tính tới lỗi: 0.006200 ms
 
 ####################################################################################################
 KẾT QUẢ THUẬT TOÁN: Branch and Bound (Nhánh cận)
-Thời gian chạy: 0.264000 ms
+Thời gian chạy: 0.006300 ms
 ####################################################################################################
-
-============================================================
-Kết quả Branch and Bound (Nhánh cận)
-============================================================
-
-Bin0(used=95/100, items=2) - Sử dụng: 95.0%
-  Items: Item8(50), Item0(45)
-
-Bin1(used=100/100, items=3) - Sử dụng: 100.0%
-  Items: Item13(45), Item4(40), Item7(15)
-
-Bin2(used=100/100, items=3) - Sử dụng: 100.0%
-  Items: Item18(40), Item6(35), Item5(25)
-
-Bin3(used=100/100, items=4) - Sử dụng: 100.0%
-  Items: Item1(30), Item9(30), Item11(30), Item3(10)
-
-Bin4(used=95/100, items=4) - Sử dụng: 95.0%
-  Items: Item17(30), Item14(25), Item2(20), Item10(20)
-
-Bin5(used=55/100, items=4) - Sử dụng: 55.0%
-  Items: Item16(20), Item15(15), Item12(10), Item19(10)
-
-============================================================
-Tổng số bins: 6
-Tổng số items: 20
-Tỷ lệ sử dụng trung bình: 90.83%
-Tổng không gian lãng phí: 55
-============================================================
-
-
+Lỗi khi chạy thuật toán Branch and Bound (Nhánh cận): Kích thước phải > 0
+Thời gian tính tới lỗi: 0.006300 ms
