@@ -43,7 +43,7 @@ pip install -e .[dev]
 ### Step 4: Run the Application
 - Run the shim launcher at project root:
 ```bash
-  python src/main.py --input src/input_dataset1.txt --output src/output_dataset1.txt
+  python src/main.py --input input_dataset1.txt --output output_dataset1.txt
 ```
 ---
 
