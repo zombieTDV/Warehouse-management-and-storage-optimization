@@ -7,68 +7,68 @@ CSV output: C:\document\Study documents\PTTK_GT\BTL\Warehouse-management-and-sto
 
 Aggregated (mean, median) per scenario/scale/algorithm:
 
-       original | scale=1  | n=18  | FirstFit   | mean=0.000016s median=0.000015s
-       original | scale=1  | n=18  | BestFit    | mean=0.000019s median=0.000017s
-       original | scale=1  | n=18  | FFD        | mean=0.000028s median=0.000027s
-       original | scale=1  | n=18  | Knapsack   | mean=0.001655s median=0.001494s
-       original | scale=1  | n=18  | BnB        | mean=0.000145s median=0.000140s
-       original | scale=2  | n=36  | FirstFit   | mean=0.000023s median=0.000023s
-       original | scale=2  | n=36  | BestFit    | mean=0.000026s median=0.000025s
-       original | scale=2  | n=36  | FFD        | mean=0.000063s median=0.000062s
-       original | scale=2  | n=36  | Knapsack   | mean=0.004994s median=0.004917s
-       original | scale=2  | n=36  | BnB        | mean=0.001246s median=0.001120s
-       original | scale=5  | n=90  | FirstFit   | mean=0.000097s median=0.000096s
-       original | scale=5  | n=90  | BestFit    | mean=0.000093s median=0.000090s
-       original | scale=5  | n=90  | FFD        | mean=0.000355s median=0.000354s
-       original | scale=5  | n=90  | Knapsack   | mean=0.025195s median=0.025440s
-       original | scale=5  | n=90  | BnB        | mean=0.001353s median=0.001065s
-       original | scale=10 | n=180 | FirstFit   | mean=0.000356s median=0.000360s
-       original | scale=10 | n=180 | BestFit    | mean=0.000331s median=0.000332s
-       original | scale=10 | n=180 | FFD        | mean=0.001386s median=0.001381s
-       original | scale=10 | n=180 | Knapsack   | mean=0.094822s median=0.094822s
-       original | scale=10 | n=180 | BnB        | mean=0.004838s median=0.005214s
+       original | scale=1  | n=18  | FirstFit   | mean=0.000032s median=0.000029s
+       original | scale=1  | n=18  | BestFit    | mean=0.000035s median=0.000033s
+       original | scale=1  | n=18  | FFD        | mean=0.000053s median=0.000051s
+       original | scale=1  | n=18  | Knapsack   | mean=0.004235s median=0.004257s
+       original | scale=1  | n=18  | BnB        | mean=0.000360s median=0.000348s
+       original | scale=2  | n=36  | FirstFit   | mean=0.000069s median=0.000066s
+       original | scale=2  | n=36  | BestFit    | mean=0.000070s median=0.000074s
+       original | scale=2  | n=36  | FFD        | mean=0.000152s median=0.000153s
+       original | scale=2  | n=36  | Knapsack   | mean=0.009162s median=0.008243s
+       original | scale=2  | n=36  | BnB        | mean=0.001316s median=0.001418s
+       original | scale=5  | n=90  | FirstFit   | mean=0.000100s median=0.000100s
+       original | scale=5  | n=90  | BestFit    | mean=0.000095s median=0.000093s
+       original | scale=5  | n=90  | FFD        | mean=0.000367s median=0.000366s
+       original | scale=5  | n=90  | Knapsack   | mean=0.026021s median=0.025290s
+       original | scale=5  | n=90  | BnB        | mean=0.001332s median=0.001169s
+       original | scale=10 | n=180 | FirstFit   | mean=0.000332s median=0.000330s
+       original | scale=10 | n=180 | BestFit    | mean=0.000268s median=0.000269s
+       original | scale=10 | n=180 | FFD        | mean=0.001618s median=0.001375s
+       original | scale=10 | n=180 | Knapsack   | mean=0.095714s median=0.097123s
+       original | scale=10 | n=180 | BnB        | mean=0.003726s median=0.003775s
 Plot saved: C:\document\Study documents\PTTK_GT\BTL\Warehouse-management-and-storage-optimization\run_time_original.png
 
-    small_first | scale=1  | n=18  | FirstFit   | mean=0.000013s median=0.000013s
-    small_first | scale=1  | n=18  | BestFit    | mean=0.000017s median=0.000016s
-    small_first | scale=1  | n=18  | FFD        | mean=0.000037s median=0.000037s
-    small_first | scale=1  | n=18  | Knapsack   | mean=0.001083s median=0.001080s
-    small_first | scale=1  | n=18  | BnB        | mean=0.000164s median=0.000161s
-    small_first | scale=2  | n=36  | FirstFit   | mean=0.000023s median=0.000022s
-    small_first | scale=2  | n=36  | BestFit    | mean=0.000028s median=0.000027s
-    small_first | scale=2  | n=36  | FFD        | mean=0.000087s median=0.000086s
-    small_first | scale=2  | n=36  | Knapsack   | mean=0.004060s median=0.004079s
-    small_first | scale=2  | n=36  | BnB        | mean=0.001479s median=0.001418s
-    small_first | scale=5  | n=90  | FirstFit   | mean=0.000091s median=0.000090s
-    small_first | scale=5  | n=90  | BestFit    | mean=0.000114s median=0.000104s
-    small_first | scale=5  | n=90  | FFD        | mean=0.000400s median=0.000394s
-    small_first | scale=5  | n=90  | Knapsack   | mean=0.021013s median=0.021081s
-    small_first | scale=5  | n=90  | BnB        | mean=0.001119s median=0.001099s
-    small_first | scale=10 | n=180 | FirstFit   | mean=0.000298s median=0.000291s
-    small_first | scale=10 | n=180 | BestFit    | mean=0.000281s median=0.000284s
-    small_first | scale=10 | n=180 | FFD        | mean=0.001460s median=0.001461s
-    small_first | scale=10 | n=180 | Knapsack   | mean=0.083336s median=0.083485s
-    small_first | scale=10 | n=180 | BnB        | mean=0.003741s median=0.003903s
+    small_first | scale=1  | n=18  | FirstFit   | mean=0.000015s median=0.000015s
+    small_first | scale=1  | n=18  | BestFit    | mean=0.000019s median=0.000018s
+    small_first | scale=1  | n=18  | FFD        | mean=0.000032s median=0.000024s
+    small_first | scale=1  | n=18  | Knapsack   | mean=0.000870s median=0.000892s
+    small_first | scale=1  | n=18  | BnB        | mean=0.000143s median=0.000132s
+    small_first | scale=2  | n=36  | FirstFit   | mean=0.000019s median=0.000019s
+    small_first | scale=2  | n=36  | BestFit    | mean=0.000024s median=0.000023s
+    small_first | scale=2  | n=36  | FFD        | mean=0.000089s median=0.000074s
+    small_first | scale=2  | n=36  | Knapsack   | mean=0.003400s median=0.003286s
+    small_first | scale=2  | n=36  | BnB        | mean=0.001233s median=0.001180s
+    small_first | scale=5  | n=90  | FirstFit   | mean=0.000131s median=0.000152s
+    small_first | scale=5  | n=90  | BestFit    | mean=0.000095s median=0.000095s
+    small_first | scale=5  | n=90  | FFD        | mean=0.000495s median=0.000519s
+    small_first | scale=5  | n=90  | Knapsack   | mean=0.024155s median=0.024392s
+    small_first | scale=5  | n=90  | BnB        | mean=0.001195s median=0.001184s
+    small_first | scale=10 | n=180 | FirstFit   | mean=0.000419s median=0.000464s
+    small_first | scale=10 | n=180 | BestFit    | mean=0.000341s median=0.000349s
+    small_first | scale=10 | n=180 | FFD        | mean=0.001739s median=0.001732s
+    small_first | scale=10 | n=180 | Knapsack   | mean=0.084962s median=0.080407s
+    small_first | scale=10 | n=180 | BnB        | mean=0.003337s median=0.003260s
 Plot saved: C:\document\Study documents\PTTK_GT\BTL\Warehouse-management-and-storage-optimization\run_time_small_first.png
 
 mixed_adversarial | scale=1  | n=18  | FirstFit   | mean=0.000009s median=0.000009s
 mixed_adversarial | scale=1  | n=18  | BestFit    | mean=0.000012s median=0.000011s
 mixed_adversarial | scale=1  | n=18  | FFD        | mean=0.000021s median=0.000020s
-mixed_adversarial | scale=1  | n=18  | Knapsack   | mean=0.001260s median=0.001255s
-mixed_adversarial | scale=1  | n=18  | BnB        | mean=0.000140s median=0.000129s
-mixed_adversarial | scale=2  | n=36  | FirstFit   | mean=0.000022s median=0.000021s
+mixed_adversarial | scale=1  | n=18  | Knapsack   | mean=0.001269s median=0.001271s
+mixed_adversarial | scale=1  | n=18  | BnB        | mean=0.000243s median=0.000137s
+mixed_adversarial | scale=2  | n=36  | FirstFit   | mean=0.000021s median=0.000021s
 mixed_adversarial | scale=2  | n=36  | BestFit    | mean=0.000025s median=0.000025s
-mixed_adversarial | scale=2  | n=36  | FFD        | mean=0.000069s median=0.000069s
-mixed_adversarial | scale=2  | n=36  | Knapsack   | mean=0.004341s median=0.004340s
-mixed_adversarial | scale=2  | n=36  | BnB        | mean=0.001176s median=0.001148s
-mixed_adversarial | scale=5  | n=90  | FirstFit   | mean=0.000096s median=0.000096s
-mixed_adversarial | scale=5  | n=90  | BestFit    | mean=0.000097s median=0.000099s
-mixed_adversarial | scale=5  | n=90  | FFD        | mean=0.000395s median=0.000378s
-mixed_adversarial | scale=5  | n=90  | Knapsack   | mean=0.023749s median=0.023806s
-mixed_adversarial | scale=5  | n=90  | BnB        | mean=0.001076s median=0.001059s
-mixed_adversarial | scale=10 | n=180 | FirstFit   | mean=0.000338s median=0.000326s
-mixed_adversarial | scale=10 | n=180 | BestFit    | mean=0.000263s median=0.000261s
-mixed_adversarial | scale=10 | n=180 | FFD        | mean=0.001431s median=0.001425s
-mixed_adversarial | scale=10 | n=180 | Knapsack   | mean=0.091705s median=0.090112s
-mixed_adversarial | scale=10 | n=180 | BnB        | mean=0.003853s median=0.003519s
+mixed_adversarial | scale=2  | n=36  | FFD        | mean=0.000067s median=0.000067s
+mixed_adversarial | scale=2  | n=36  | Knapsack   | mean=0.004489s median=0.004469s
+mixed_adversarial | scale=2  | n=36  | BnB        | mean=0.000732s median=0.000723s
+mixed_adversarial | scale=5  | n=90  | FirstFit   | mean=0.000124s median=0.000096s
+mixed_adversarial | scale=5  | n=90  | BestFit    | mean=0.000090s median=0.000088s
+mixed_adversarial | scale=5  | n=90  | FFD        | mean=0.000366s median=0.000368s
+mixed_adversarial | scale=5  | n=90  | Knapsack   | mean=0.025250s median=0.025991s
+mixed_adversarial | scale=5  | n=90  | BnB        | mean=0.001208s median=0.001121s
+mixed_adversarial | scale=10 | n=180 | FirstFit   | mean=0.000328s median=0.000330s
+mixed_adversarial | scale=10 | n=180 | BestFit    | mean=0.000263s median=0.000264s
+mixed_adversarial | scale=10 | n=180 | FFD        | mean=0.001429s median=0.001427s
+mixed_adversarial | scale=10 | n=180 | Knapsack   | mean=0.090592s median=0.089185s
+mixed_adversarial | scale=10 | n=180 | BnB        | mean=0.004086s median=0.004030s
 Plot saved: C:\document\Study documents\PTTK_GT\BTL\Warehouse-management-and-storage-optimization\run_time_mixed_adversarial.png
